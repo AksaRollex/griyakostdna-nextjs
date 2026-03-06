@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { MessageCircle, User, UserCheck } from "lucide-react";
 
 export default function Home() {
   const navItems = [
@@ -140,16 +141,18 @@ export default function Home() {
 
   return (
     <main className="w-full bg-[#111115] font-sans text-white overflow-x-hidden relative">
+      {/* Home */}
       <section className="relative min-h-screen flex flex-col items-center justify-start w-full bg-[url('/images/bg-home.png')] bg-cover bg-center">
-        <nav className="w-full max-w-7xl mx-auto px-6 py-8 flex justify-between items-start z-50">
-          <div className="w-48 relative h-16">
+        {/* Navbar */}
+        <nav className="w-full mx-auto px-24 max-w-11/12 flex justify-between items-center z-50 ">
+          <div className="w-72 relative h-32 py-3 ">
             <Image
               src="/images/logo.png"
               alt="Griya Kost DNA Logo"
               fill
-              sizes="(max-width: 768px) 100vw, 200px"
+              // sizes="(max-width: 768px) 100vw, 200px"
               priority
-              className="object-contain object-left drop-shadow-md"
+              className="object-contain object-left drop-shadow-md pt-3"
             />
           </div>
           <div className="hidden md:flex gap-4 items-center">
@@ -165,45 +168,50 @@ export default function Home() {
           </div>
         </nav>
 
-        <div className="w-full max-w-screen-2xl mx-auto px-6 flex-1 flex flex-col md:flex-row items-center justify-between z-10 pb-20 relative">
-          <div className="flex-[0.85] flex flex-col items-start gap-2 max-w-2xl pt-10 md:pt-0 lg:pl-12">
-            <h2 className="text-2xl md:text-3xl italic font-medium text-white/90">
+        {/* Content */}
+        <div className="w-full max-w-11/12  px-6 flex-1 flex flex-col md:flex-row items-center justify-between z-10 pb-20 relative">
+          <div className="flex flex-col items-start gap-4 max-w-2xl pt-10 md:pt-0 lg:pl-12">
+            <h2 className="text-3xl md:text-2xl lg:text-3xl font-medium text-white/90 font-vanilla">
               Siapa itu
             </h2>
-            <h1 className="text-6xl md:text-[6rem] font-extrabold leading-[1.05] tracking-tight drop-shadow-lg text-nowrap">
+
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
               GRIYA KOST <br /> DNA{" "}
-              <span className="text-5xl md:text-7xl align-top text-pink-400">
+              <span className="text-5xl md:text-7xl lg:text-8xl text-pink-400">
                 ?
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mt-6 leading-relaxed font-medium">
+
+            <p className="text-base md:text-lg lg:text-xl text-gray-200 mt-4 md:mt-6 leading-relaxed font-medium max-w-xl">
               Griya Kost DNA adalah tempat hunian kos khusus putri yang
               menyediakan kamar dengan fasilitas lengkap, lingkungan yang aman,
               dan harga yang terjangkau.
             </p>
             <a
               href="#layanan-kami"
-              className="inline-block mt-8 bg-white text-gray-900 hover:bg-gray-100 transition-colors px-8 py-4 rounded-xl font-bold text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200"
+              className="inline-block mt-6 md:mt-8 bg-white text-gray-900 hover:bg-gray-100 transition-all px-8 py-4 rounded-xl font-bold text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200"
             >
               Lihat Lebih Banyak
             </a>
           </div>
 
-          <div className="flex-[1.15] flex justify-end relative h-[400px] md:h-[700px] w-full mt-12 md:mt-0 pointer-events-none md:absolute right-0 top-1/2 md:-translate-y-1/2 translate-x-8 md:translate-x-16">
-            <div className="relative w-full h-full animate-[bounce_4s_ease-in-out_infinite]">
+          {/* Section Kanan - Image */}
+          <div className="relative h-[400px] md:h-[500px] lg:h-[620px] w-1/3 hidden md:flex items-center justify-center md:justify-end">
+            <div className="relative w-full h-full">
               <Image
                 src="/images/card-home.png"
                 alt="Griya Kost Cards"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain object-right drop-shadow-2xl scale-125 md:scale-[1.15]"
+                className="object-contain drop-shadow-2xl"
                 priority
               />
             </div>
           </div>
         </div>
 
-        <a
+        {/* Discover More */}
+        {/* <a
           href="#layanan-kami"
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 cursor-pointer z-10 hover:opacity-80 transition-opacity"
         >
@@ -218,55 +226,73 @@ export default function Home() {
               className="object-contain animate-bounce"
             />
           </div>
-        </a>
+        </a> */}
       </section>
 
+      {/* About Us */}
       <section
         id="tentang-kami"
-        className="w-full relative px-6 py-24 min-h-screen flex flex-col justify-center bg-[url('/images/bg-aboutus.png')] bg-cover bg-bottom"
+        className="w-full relative px-6 md:px-12 py-16 md:py-24 min-h-screen flex flex-col justify-center bg-[url('/images/bg-aboutus.png')] bg-cover bg-center"
       >
-        <div className="absolute inset-0 bg-black/60 -z-10"></div>
-        <div className="w-full max-w-[90rem] mx-auto z-10">
-          <h2 className="text-4xl md:text-[4rem] text-center mb-24 italic font-medium drop-shadow-md">
+        <div className="w-full max-w-7xl mx-auto z-10">
+          {/* Title */}
+          <h2 className="text-4xl md:text-6xl lg:text-7xl text-center mb-16 md:mb-24 font-extrabold text-white drop-shadow-lg">
             Tentang Kami
           </h2>
 
-          <div className="flex flex-col gap-32 max-w-5xl mx-auto relative z-10">
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-              <div className="flex-[0.8] w-full flex justify-center">
-                <div className="relative w-[300px] h-[220px] md:w-[450px] md:h-[280px] -rotate-3 hover:rotate-0 transition-all duration-500 drop-shadow-2xl animate-[bounce_5s_ease-in-out_infinite_reverse]">
+          {/* Content */}
+          <div className="flex flex-col gap-12 md:gap-20">
+            {/* Row 1 - Image Left, Text Right */}
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+              {/* Image */}
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="relative w-full max-w-md aspect-5/3 -rotate-2 hover:rotate-0 transition-transform duration-500 drop-shadow-2xl">
                   <Image
                     src="/images/cardleft-aboutus.png"
                     fill
                     className="object-contain"
-                    alt="Tentang Kami - Kiri"
+                    alt="Griya Kost DNA - Tampak Depan"
                   />
                 </div>
               </div>
-              <div className="flex-[1.2] w-full text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
-                Griya Kost DNA adalah kos putri yang dirancang untuk memberikan
-                tempat tinggal yang nyaman, aman, dan terjangkau bagi mahasiswa
-                maupun pekerja. Dengan bangunan dua lantai dan berbagai
-                fasilitas penunjang, Griya Kost DNA hadir sebagai pilihan hunian
-                yang praktis dan nyaman.
+
+              {/* Text */}
+              <div className="w-full md:w-1/2">
+                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl hover:bg-white/10 transition-colors duration-300">
+                  <p className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-medium">
+                    Griya Kost DNA adalah kos putri yang dirancang untuk
+                    memberikan tempat tinggal yang nyaman, aman, dan terjangkau
+                    bagi mahasiswa maupun pekerja. Dengan bangunan dua lantai
+                    dan berbagai fasilitas penunjang, Griya Kost DNA hadir
+                    sebagai pilihan hunian yang praktis dan nyaman.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16">
-              <div className="flex-[1.2] w-full text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
-                Kami menyediakan beberapa tipe kamar yang dapat disesuaikan
-                dengan kebutuhan penghuni. Lingkungan yang bersih, fasilitas
-                yang memadai, serta sistem keamanan seperti CCTV menjadikan
-                Griya Kost DNA tempat tinggal yang ideal untuk beristirahat dan
-                menjalani aktivitas sehari-hari.
+            {/* Row 2 - Text Left, Image Right */}
+            <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+              {/* Text */}
+              <div className="w-full md:w-1/2">
+                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl hover:bg-white/10 transition-colors duration-300">
+                  <p className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-medium">
+                    Kami menyediakan beberapa tipe kamar yang dapat disesuaikan
+                    dengan kebutuhan penghuni. Lingkungan yang bersih, fasilitas
+                    yang memadai, serta sistem keamanan seperti CCTV menjadikan
+                    Griya Kost DNA tempat tinggal yang ideal untuk beristirahat
+                    dan menjalani aktivitas sehari-hari.
+                  </p>
+                </div>
               </div>
-              <div className="flex-[0.8] w-full flex justify-center">
-                <div className="relative w-[300px] h-[220px] md:w-[450px] md:h-[280px] rotate-3 hover:rotate-0 transition-all duration-500 drop-shadow-2xl animate-[bounce_6s_ease-in-out_infinite]">
+
+              {/* Image */}
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="relative w-full max-w-md aspect-5/3 rotate-2 hover:rotate-0 transition-transform duration-500 drop-shadow-2xl">
                   <Image
-                    src="/images/cardright_aboutus.png"
+                    src="/images/cardright-aboutus.png"
                     fill
                     className="object-contain"
-                    alt="Tentang Kami - Kanan"
+                    alt="Griya Kost DNA - Fasilitas"
                   />
                 </div>
               </div>
@@ -275,23 +301,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Service */}
       <section
         id="layanan-kami"
-        className="w-full relative px-6 py-24 min-h-screen flex flex-col justify-center bg-[url('/images/bg-service.png')] bg-cover bg-bottom"
+        className="w-full relative px-6 py-24 min-h-screen flex flex-col justify-center bg-[url('/images/bg-service.png')] bg-cover "
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] -z-10"></div>
         <div className="w-full max-w-screen-2xl mx-auto z-10">
-          <h2 className="text-4xl md:text-[4rem] text-center mb-20 italic font-medium drop-shadow-md z-10">
+          <h2 className="text-4xl md:text-[4rem] text-center mb-20 font-extrabold drop-shadow-md z-10">
             Layanan Kami
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 z-10 ">
             {types.map((type) => (
               <div
                 key={type.id}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 flex flex-col gap-4 shadow-2xl hover:bg-white/10 transition-colors duration-300"
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl px-2 flex flex-col pb-5 gap-4 shadow-2xl hover:bg-white/10 transition-colors duration-300"
               >
-                <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-inner bg-black/20">
+                <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-inner">
                   <Image
                     src={type.image}
                     fill
@@ -299,7 +326,7 @@ export default function Home() {
                     alt={`Tipe ${type.id}`}
                   />
                 </div>
-                <div className="px-2 pb-2 flex-1 flex flex-col">
+                <div className="px-3 flex-1 flex flex-col ">
                   <h3 className="text-xl md:text-2xl font-bold mb-4 font-mono tracking-tight text-gray-100">
                     Tipe {type.id} - {type.price}/Bulan
                   </h3>
@@ -327,55 +354,58 @@ export default function Home() {
       {/* Klien Section */}
       <section
         id="klien"
-        className="w-full relative px-6 py-24 min-h-screen flex flex-col justify-center bg-[url('/images/bg-client.png')] bg-cover bg-center"
+        className="w-full relative px-6 md:px-12 py-16 md:py-24 min-h-screen flex flex-col justify-center bg-[url('/images/bg-client.png')] bg-cover bg-center"
       >
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] -z-10"></div>
-        <div className="w-full max-w-6xl mx-auto z-10 flex flex-col md:flex-row items-center justify-between">
-          <div className="w-full flex-1 flex flex-col items-center md:items-start gap-16">
-            <h2 className="text-4xl md:text-[4rem] text-center md:text-left italic font-medium drop-shadow-md z-10 pl-8 md:pl-0">
+        <div className="w-full max-w-7xl mx-auto z-10">
+          <div className="flex flex-col items-center md:items-start gap-8 md:gap-12">
+            {/* Title */}
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white text-center md:text-left drop-shadow-lg">
               Klien
             </h2>
-            <div className="flex flex-col gap-8 w-full max-w-lg">
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-2xl hover:bg-white/10 transition-colors duration-300">
-                <div className="flex items-center gap-6 md:gap-8">
-                  <div className="relative w-16 h-16 md:w-20 md:h-20">
-                    <Image
-                      src="/images/user-client.png"
-                      fill
-                      className="object-contain"
-                      alt="Penghuni"
+
+            {/* Stats Cards */}
+            <div className="flex flex-col gap-6 md:gap-8 w-full max-w-2xl">
+              {/* Card 1 - Penghuni Saat Ini */}
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-2xl hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]">
+                <div className="flex items-center gap-4 md:gap-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                    <User
+                      color="#0D81FF"
+                      className="w-full h-full"
+                      strokeWidth={2}
                     />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black text-white max-w-[150px] leading-tight font-sans tracking-wide">
-                    PENGHUNI SAAT INI
+                  <h3 className="text-sm md:text-xl font-black text-white leading-tight tracking-wide">
+                    PENGHUNI
+                    <br className="md:hidden" /> SAAT INI
                   </h3>
                 </div>
-                <span className="text-5xl md:text-6xl font-extrabold text-white">
-                  20
+                <span className="text-4xl md:text-6xl font-extrabold text-white tabular-nums">
+                  13
                 </span>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-2xl hover:bg-white/10 transition-colors duration-300">
-                <div className="flex items-center gap-6 md:gap-8">
-                  <div className="relative w-16 h-16 md:w-20 md:h-20">
-                    <Image
-                      src="/images/checklist-client.png"
-                      fill
-                      className="object-contain"
-                      alt="Total"
+              {/* Card 2 - Total yang Berpenghuni */}
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-2xl hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]">
+                <div className="flex items-center gap-4 md:gap-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                    <UserCheck
+                      color="#0D81FF"
+                      className="w-full h-full"
+                      strokeWidth={2}
                     />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black text-white max-w-[160px] leading-tight font-sans tracking-wide">
-                    TOTAL YANG BERPENGHUNI
+                  <h3 className="text-sm md:text-xl font-black text-white leading-tight tracking-wide">
+                    TOTAL YANG
+                    <br className="md:hidden" /> BERPENGHUNI
                   </h3>
                 </div>
-                <span className="text-5xl md:text-6xl font-extrabold text-white">
-                  20
+                <span className="text-4xl md:text-6xl font-extrabold text-white tabular-nums">
+                  22
                 </span>
               </div>
             </div>
           </div>
-          <div className="hidden md:block flex-1"></div>
         </div>
       </section>
 
@@ -386,7 +416,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px] -z-10"></div>
         <div className="w-full max-w-5xl mx-auto z-10">
-          <h2 className="text-4xl md:text-[4rem] text-center mb-16 italic font-medium drop-shadow-md z-10">
+          <h2 className="text-4xl md:text-[4rem] text-center mb-16 font-extrabold drop-shadow-md z-10">
             Our Social Media
           </h2>
 
@@ -483,13 +513,13 @@ export default function Home() {
 
       {/* Detail Modal Overlay */}
       {selectedType && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 overflow-y-auto">
           <div
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity"
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
             onClick={closeModal}
           ></div>
 
-          <div className="relative w-full max-w-4xl bg-[#1a1a20] rounded-3xl shadow-2xl overflow-hidden border border-white/10 animate-in fade-in zoom-in duration-300">
+          <div className="relative w-full max-w-4xl bg-[#1a1a20] rounded-3xl shadow-2xl border border-white/10 my-8">
             {/* Close Button */}
             <button
               onClick={closeModal}
@@ -511,7 +541,7 @@ export default function Home() {
               </svg>
             </button>
 
-            <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8 h-full md:max-h-[85vh] overflow-y-auto">
+            <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8 max-h-[calc(100vh-4rem)] overflow-y-auto">
               {/* Left Side: Images */}
               <div className="flex-1 flex flex-col gap-4">
                 {/* Main Large Image */}
@@ -523,6 +553,7 @@ export default function Home() {
                     alt={`Main View ${selectedType.id}`}
                   />
                 </div>
+
                 {/* Thumbnails */}
                 <div className="grid grid-cols-4 gap-3">
                   {selectedType.images.map((img, idx) => (
@@ -539,7 +570,7 @@ export default function Home() {
                         src={img}
                         fill
                         className="object-cover"
-                        alt={`Thumb ${idx}`}
+                        alt={`Thumbnail ${idx + 1}`}
                       />
                     </button>
                   ))}
@@ -547,15 +578,15 @@ export default function Home() {
               </div>
 
               {/* Right Side: Info */}
-              <div className="flex-[1.2] flex flex-col pt-4">
-                <h3 className="text-4xl md:text-5xl font-extrabold italic mb-2 font-sans tracking-tight">
+              <div className="flex-1 md:flex-[1.2] flex flex-col">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-2 font-sans tracking-tight">
                   Kamar Tipe {selectedType.id}
                 </h3>
-                <p className="text-xl font-mono text-gray-300 mb-8">
+                <p className="text-lg md:text-xl font-mono text-gray-300 mb-8">
                   {selectedType.fullPrice} / Bulan
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 mb-10 flex-1">
+                <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 mb-10">
                   {/* Fasilitas Pribadi */}
                   <div className="flex-1">
                     <h4 className="font-bold text-lg mb-4 text-white">
@@ -589,18 +620,13 @@ export default function Home() {
 
                 {/* CTA Button */}
                 <a
-                  href="https://wa.me/yourphonenumber"
+                  href="https://wa.me/+6285336970707"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto bg-white text-gray-900 hover:bg-green-50 hover:text-green-700 transition-colors px-6 py-4 rounded-xl font-bold text-sm shadow-xl flex items-center justify-center gap-3 w-fit md:w-full border border-gray-200"
+                  className="mt-auto bg-white text-gray-900 hover:bg-green-50 hover:text-green-700 transition-colors px-6 py-4 rounded-xl font-bold text-sm shadow-xl flex items-center justify-center gap-3 w-full border border-gray-200"
                 >
-                  <div className="relative w-6 h-6">
-                    <Image
-                      src="/images/whatsapp-socmed.png"
-                      fill
-                      className="object-contain"
-                      alt="WhatsApp"
-                    />
+                  <div className="relative w-6 h-6 shrink-0">
+                    <MessageCircle color="green" />
                   </div>
                   Pesan Sekarang Melalui Whatsapp
                 </a>
