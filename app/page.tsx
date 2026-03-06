@@ -172,15 +172,15 @@ export default function Home() {
         {/* Content */}
         <div className="w-full max-w-11/12  px-6 flex-1 flex flex-col md:flex-row items-center justify-between z-10 pb-20 relative">
           <div className="flex flex-col items-start gap-4 max-w-2xl pt-10 md:pt-0 lg:pl-12">
-            <h2 className="text-3xl md:text-2xl lg:text-3xl font-medium text-white/90 font-vanilla">
+            {/* <h2 className="text-3xl md:text-2xl lg:text-3xl font-medium text-white/90 font-vanilla">
               Siapa itu
-            </h2>
+            </h2> */}
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
               GRIYA KOST <br /> DNA{" "}
-              <span className="text-5xl md:text-7xl lg:text-8xl text-pink-400">
+              {/* <span className="text-5xl md:text-7xl lg:text-8xl text-pink-400">
                 ?
-              </span>
+              </span> */}
             </h1>
 
             <p className="text-base md:text-lg lg:text-xl text-gray-200 mt-4 md:mt-6 leading-relaxed font-medium max-w-xl">
@@ -237,7 +237,7 @@ export default function Home() {
       >
         <div className="w-full max-w-7xl mx-auto z-10">
           {/* Title */}
-          <h2 className="text-4xl md:text-6xl lg:text-7xl text-center mb-16 md:mb-24 font-extrabold text-white drop-shadow-lg">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl text-center mb-16 md:mb-24 font-bold text-white drop-shadow-lg">
             Tentang Kami
           </h2>
 
@@ -309,7 +309,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] -z-10"></div>
         <div className="w-full max-w-screen-2xl mx-auto z-10">
-          <h2 className="text-4xl md:text-[4rem] text-center mb-20 font-extrabold drop-shadow-md z-10">
+          <h2 className="text-4xl md:text-[4rem] text-center mb-20 font-bold drop-shadow-md z-10">
             Layanan Kami
           </h2>
 
@@ -360,7 +360,7 @@ export default function Home() {
         <div className="w-full max-w-7xl mx-auto z-10">
           <div className="flex flex-col items-center md:items-start gap-8 md:gap-12">
             {/* Title */}
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white text-center md:text-left drop-shadow-lg">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center md:text-left drop-shadow-lg">
               Klien
             </h2>
 
@@ -369,7 +369,7 @@ export default function Home() {
               {/* Card 1 - Penghuni Saat Ini */}
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-2xl hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]">
                 <div className="flex items-center gap-4 md:gap-6">
-                  <div className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                  <div className="w-14 h-14 md:w-20 md:h-20 shrink-0 flex items-center justify-center">
                     <User
                       color="#0D81FF"
                       className="w-full h-full"
@@ -417,7 +417,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px] -z-10"></div>
         <div className="w-full max-w-5xl mx-auto z-10">
-          <h2 className="text-4xl md:text-[4rem] text-center mb-16 font-extrabold drop-shadow-md z-10">
+          <h2 className="text-4xl md:text-[4rem] text-center mb-16 font-bold drop-shadow-md z-10">
             Our Social Media
           </h2>
 
