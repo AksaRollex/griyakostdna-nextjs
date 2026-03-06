@@ -10,6 +10,7 @@ export default function Home() {
     { name: "Tentang Kami", href: "#tentang-kami" },
     { name: "Layanan Kami", href: "#layanan-kami" },
     { name: "Klien", href: "#klien" },
+    { name: "Kontak", href: "#social-media" },
   ];
 
   const types = [
