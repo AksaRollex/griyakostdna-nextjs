@@ -310,7 +310,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] -z-10"></div>
         <div className="w-full max-w-screen-2xl mx-auto z-10">
           <h2 className="text-4xl md:text-[4rem] text-center mb-20 font-bold drop-shadow-md z-10">
-            Layanan Kami
+            Layanan
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 z-10 ">
@@ -418,7 +418,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px] -z-10"></div>
         <div className="w-full max-w-5xl mx-auto z-10">
           <h2 className="text-4xl md:text-[4rem] text-center mb-16 font-bold drop-shadow-md z-10">
-            Our Social Media
+            Media Sosial
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
